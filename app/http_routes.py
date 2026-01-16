@@ -50,13 +50,12 @@ INDEX_HTML = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🧋 Servizio - Voice Ordering System</title>
+  <title>Servizio - Voice Ordering System</title>
   <style>
     :root { color-scheme: light dark; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
            min-height:100vh; display:grid; place-items:center;
-           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
     .card { background: rgba(255,255,255,0.95); border-radius: 20px; padding: 32px; max-width: 900px; width: 94%;
             box-shadow: 0 18px 60px rgba(0,0,0,0.25); }
     h1 { margin: 0 0 8px; color:#2d3748; }
@@ -71,7 +70,7 @@ INDEX_HTML = """<!DOCTYPE html>
 </head>
 <body>
   <div class="card">
-    <h1>🧋 Servizio</h1>
+    <h1>Servizio</h1>
     <p>Voice Ordering System</p>
     <div class="grid">
       <a class="tile" href="/orders">
@@ -89,10 +88,7 @@ INDEX_HTML = """<!DOCTYPE html>
         <div class="t2">Recent orders feed</div>
         <code>/orders.json</code>
       </a>
-      <div class="tile">
-        <div class="t1">☎️ Twilio Voice Webhook</div>
-        <div class="t2">TwiML endpoint (Twilio calls this)</div>
-        <code>/voice</code>
+  
       </div>
     </div>
   </div>
@@ -126,7 +122,7 @@ async def voice_twiml(request: Request):
 
     twiml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Say>Connecting you to the Deepgram Boba Rista.</Say>
+  <Say>Connecting you to the Servizio.</Say>
   <Connect>
     <Stream url="{scheme}://{host}/twilio">
       <Parameter name="call_sid" value="{call_sid}"/>

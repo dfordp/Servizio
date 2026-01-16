@@ -4,7 +4,7 @@ import asyncio
 
 from . import business_logic as bl
 from .session import sessions
-from .events import publish  # NEW
+from .events import publish
 
 # ---------- Tool implementations (per-call) ----------
 async def _add_to_cart(flavor: str, toppings=None, sweetness: str | None = None,
